@@ -625,7 +625,6 @@ class Visualization_for_lang:
                 )
 
                 if display_discarded_words_by_filter:
-
                     if "len_word" in columns:
                         cond_filter = np.invert(conds_words["len_word"])
                         Visualization_for_lang.display_dataset(
@@ -698,7 +697,6 @@ class Visualization_for_lang:
                     return score < key[1]
 
             if personal_doc:
-
                 st.markdown("Statistics of the document:")
 
                 for key in self.keys:

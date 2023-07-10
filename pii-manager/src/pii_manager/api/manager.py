@@ -31,13 +31,11 @@ def fetch_all_tasks(
     """
     taskdict = get_taskdict(debug=debug)
     # Language-independent
-    for task in taskdict[LANG_ANY].values():
-        yield task
+    yield from taskdict[LANG_ANY].values()
 
     langdict = taskdict.get(lang, {})
     # Country-independent
-    for task in langdict.get(COUNTRY_ANY, {}).values():
-        yield task
+    yield from langdict.get(COUNTRY_ANY, {}).values()
     # Country-specific
     if country:
         if country[0] in (COUNTRY_ANY, "all"):
@@ -45,8 +43,7 @@ def fetch_all_tasks(
         for c in country:
             if c == COUNTRY_ANY:  # already included above
                 continue
-            for task in langdict.get(c, {}).values():
-                yield task
+            yield from langdict.get(c, {}).values()
 
 
 def fetch_task(

@@ -21,7 +21,6 @@ class GetDataForVisualization:
         path_kenlm_model,
         path_save_stats,
     ):
-
         self.ds = dataset
         self.num_iter = num_iter
 
@@ -166,7 +165,6 @@ class GetDataForVisualization:
 
 
 if __name__ == "__main__":
-
     lang_dataset_id = "en"
 
     dataset_name = "oscar"  # "TurkuNLP/register_oscar"

@@ -74,7 +74,7 @@ def test10_context_true():
     """
     Check valid contexts
     """
-    for (text, context) in TEST_TRUE:
+    for text, context in TEST_TRUE:
         spec = mod.context_spec(context)
         assert mod.context_check(text, spec, 20) is True
 
@@ -83,7 +83,7 @@ def test20_context_false():
     """
     Check invalid contexts
     """
-    for (text, context) in TEST_FALSE:
+    for text, context in TEST_FALSE:
         spec = mod.context_spec(context)
         assert mod.context_check(text, spec, 20) is False
 

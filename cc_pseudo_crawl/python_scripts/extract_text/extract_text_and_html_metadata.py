@@ -431,7 +431,6 @@ def main(args: PreprocessingConfig) -> None:  # Setup logging
         ]
 
     def process_file(file_name: str):
-
         logger.info(config.HF_DATASETS_CACHE)
         processing_name = (
             "-".join(args.metadata_to_include)

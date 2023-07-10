@@ -42,7 +42,6 @@ def get_executor(
     task_parallelism: int = -1,
     options: dict = {},
 ) -> Executor:
-
     execution_mode = execution.split(",")[0]
     options.update(
         {kv.split("=", 1)[0]: kv.split("=", 1)[1] for kv in execution.split(",")[1:]}

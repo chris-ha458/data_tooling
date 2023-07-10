@@ -28,6 +28,7 @@ logger = logging.getLogger(__name__)
 
 META_COLUMNS = ["meta"]
 
+
 # filter text to remove certain lines (e.g. menu items, copyright notice)
 def filter_lines(article, skip_set, used_lines):
     # TODO discuss the strip

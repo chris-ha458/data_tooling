@@ -1,5 +1,4 @@
 #!/usr/bin/env python
-# -*- coding: utf-8 -*-
 # @Date       : 2022-01-08 22:39:29
 # @Author     : Chenghao Mou (mouchenghao@gmail.com)
 # @Description: Self-deduplication with `datasets`
@@ -27,8 +26,7 @@ logger = logging.getLogger(__name__)
 
 
 def main(conf: str) -> None:
-
-    with open(conf, "r") as f:
+    with open(conf) as f:
         conf = yaml.safe_load(f.read())
 
     if conf["load_from_disk"]["path"]:
@@ -201,5 +199,4 @@ def main(conf: str) -> None:
 
 
 if __name__ == "__main__":
-
     typer.run(main)
